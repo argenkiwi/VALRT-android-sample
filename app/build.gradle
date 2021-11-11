@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 31
 
     defaultConfig {
         applicationId "com.vsnmobil.vsnconnect"
-        minSdkVersion 18
-        targetSdkVersion 18
+        minSdkVersion 21
+        targetSdkVersion 31
     }
 
     buildTypes {
@@ -19,5 +19,10 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}
+
+repositories {
+    mavenCentral()
 }
